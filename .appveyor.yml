@@ -11,8 +11,9 @@ install:
   - cmd: conda update --yes --quiet conda
   # Add our channels.
   - cmd: conda config --add channels defaults
+  - cmd: conda config --add channels isuruf/label/flang
   - cmd: conda config --add channels conda-forge
-  - cmd: conda install --yes --quiet flang clangdev openmp cmake
+  - cmd: conda install --yes --quiet flang clangdev openmp cmake=3.10
   - cmd: set "PATH=%CONDA_INSTALL_LOCN%\Scripts;%CONDA_INSTALL_LOCN%;%PATH%"
 
 build_script:
